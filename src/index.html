@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combined Technologies | ICT Solutions Zimbabwe</title>
+  <link rel="stylesheet" href="./output.css" />
+  <script defer src="./index.js"></script>    
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-white text-slate-800 font-sans">
+
+<!-- ==================== HEADER ==================== -->
+<header
+  id="main-header"
+  class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm"
+>
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between relative">
+
+    <!-- Logo (flow naturally, vertically centered) -->
+    <a href="index.html" class="flex items-center z-50">
+      <img
+        src="./assets/logo.png"
+        alt="Combined Technologies Logo"
+        class="h-16 md:h-20"
+      />
+    </a>
+
+    <!-- Desktop Nav (centered) -->
+    <nav class="hidden md:flex w-full justify-center">
+      <ul class="flex space-x-10 text-sm font-medium">
+        <li><a href="index.html" class="hover:text-red-600 transition">Home</a></li>
+        <li><a href="#" class="hover:text-red-600 transition">Services</a></li>
+        <li><a href="#" class="hover:text-red-600 transition">About</a></li>
+        <li><a href="#" class="hover:text-red-600 transition">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger (right) -->
+    <button
+      id="menu-btn"
+      class="md:hidden z-50 focus:outline-none"
+    >
+      <svg
+        class="w-8 h-8 text-slate-800"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden bg-white/90 backdrop-blur-md shadow-md"
+  >
+    <nav class="flex flex-col items-center justify-center gap-6 py-8 text-base font-medium">
+      <a href="index.html" class="hover:text-red-600 transition">Home</a>
+      <a href="#" class="hover:text-red-600 transition">Services</a>
+      <a href="#" class="hover:text-red-600 transition">About</a>
+      <a href="#" class="hover:text-red-600 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="relative bg-gradient-to-r from-indigo-900 via-slate-900 to-indigo-700 text-white overflow-hidden">
+    <img src="./assets/hero-tech.jpg" alt="ICT Tech" class="absolute inset-0 w-full h-full object-cover opacity-20">
+    <div class="max-w-7xl mx-auto px-6 py-32 text-center md:text-left relative z-10">
+      <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6" data-aos="fade-up">
+        Next-Gen ICT Solutions in Zimbabwe
+      </h2>
+      <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-3xl" data-aos="fade-up" data-aos-delay="100">
+        Delivering ultra-modern software, hardware, and network services with precision and professionalism.
+      </p>
+      <div class="flex justify-center md:justify-start gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html" class="px-8 py-4 bg-red-600 rounded-xl font-semibold hover:bg-red-500 transition">
+          Get Started
+        </a>
+        <a href="services.html" class="px-8 py-4 border border-red-600 rounded-xl font-semibold hover:bg-red-500 hover:text-white transition">
+          Our Services
+        </a>
+      </div>
+    </div>
+    <!-- Animated background blob -->
+    <div class="absolute -bottom-10 right-0 w-72 h-72 bg-red-500/20 rounded-full filter blur-3xl animate-pulse-slow"></div>
+  </section>
+
+<!-- ==================== AT A GLANCE ==================== -->
+<section class="relative py-28 bg-slate-50 overflow-hidden">
+
+  <!-- Ambient background accents -->
+  <div class="absolute -top-32 right-[-6rem] w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-[-4rem] w-80 h-80 bg-slate-900/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-20">
+      <span class="text-sm uppercase tracking-widest text-slate-500 font-semibold">
+        At a Glance
+      </span>
+      <h3 class="mt-4 text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+        A focused ICT partner built
+        <span class="text-indigo-600">for modern business</span>
+      </h3>
+      <p class="mt-6 text-lg text-slate-600">
+        A snapshot of who we are and how we create measurable impact through technology.
+      </p>
+    </div>
+
+    <!-- Content Rows -->
+    <div class="space-y-16">
+
+      <!-- Who We Are -->
+      <div class="grid md:grid-cols-12 gap-8 items-start group">
+        <div class="md:col-span-4">
+          <h4 class="text-2xl font-semibold text-slate-900">
+            Who We Are
+          </h4>
+          <div class="mt-3 h-1 w-16 bg-slate-900 rounded-full transition-all duration-500 group-hover:w-28"></div>
+        </div>
+
+        <div
+          class="md:col-span-8 p-8 bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-20px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-1"
+        >
+          <p class="text-lg text-slate-700 leading-relaxed">
+            We are a leading ICT company delivering software development, networking
+            solutions, enterprise systems integration, and strategic technology
+            consulting tailored for scalable growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- What We Do -->
+      <div class="grid md:grid-cols-12 gap-8 items-start group">
+        <div class="md:col-span-4">
+          <h4 class="text-2xl font-semibold text-slate-900">
+            What We Do
+          </h4>
+          <div class="mt-3 h-1 w-16 bg-slate-900 rounded-full transition-all duration-500 group-hover:w-28"></div>
+        </div>
+
+        <div
+          class="md:col-span-8 p-8 bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-20px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-1"
+        >
+          <p class="text-lg text-slate-700 leading-relaxed">
+            We design, implement, and support high-quality ICT solutions with a strong
+            emphasis on professionalism, reliability, and innovation — enabling
+            businesses across Zimbabwe to operate smarter and faster.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== VISION & MISSION ==================== -->
+<section class="relative py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50">
+
+  <!-- Decorative background accents -->
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-slate-900/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+
+    <!-- Vision -->
+    <div class="group">
+      <span class="text-sm uppercase tracking-widest text-red-600 font-semibold">
+        Our Vision
+      </span>
+
+      <h3 class="mt-4 text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+        Shaping the future of
+        <span class="text-red-600">ICT excellence</span>
+      </h3>
+
+      <p class="mt-6 text-lg text-slate-600 max-w-xl">
+        To be the company of choice in the provision of quality ICT services
+        and innovative technology solutions.
+      </p>
+
+      <!-- Interactive underline -->
+      <div class="mt-8 h-1 w-24 bg-red-600 rounded-full transition-all duration-500 group-hover:w-40"></div>
+    </div>
+
+    <!-- Mission (glass panel, not a box) -->
+    <div
+      class="relative p-10 rounded-3xl bg-white/60 backdrop-blur-xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2"
+    >
+      <!-- Accent stripe -->
+      <div class="absolute top-0 left-0 h-full w-1 bg-red-600 rounded-full"></div>
+
+      <span class="text-sm uppercase tracking-widest text-red-600 font-semibold">
+        Our Mission
+      </span>
+
+      <h3 class="mt-4 text-3xl font-bold text-slate-900">
+        Purpose-driven delivery
+      </h3>
+
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+        Deliver outstanding ICT products and services through professional
+        hardware, software, and consultancy solutions that empower businesses
+        to scale with confidence.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="relative py-28 bg-slate-50 overflow-hidden" data-aos="fade-up">
+
+  <!-- Ambient floating shapes -->
+  <div class="absolute -top-24 -left-24 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl animate-blob-slow"></div>
+  <div class="absolute -bottom-28 right-[-10rem] w-96 h-96 bg-slate-900/5 rounded-full blur-3xl animate-blob-slow"></div>
+  <div class="absolute top-1/2 left-[-10rem] w-80 h-80 bg-indigo-400/5 rounded-full blur-3xl animate-blob-slow"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Section Header -->
+    <div class="text-center mb-20">
+      <span class="text-sm uppercase tracking-widest text-slate-500 font-semibold">Our Services</span>
+      <h3 class="mt-4 text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+        What We Offer <span class="text-indigo-600">for Modern Businesses</span>
+      </h3>
+      <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
+        From software development to networking and hardware solutions, we provide a seamless ICT experience that empowers your business.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <!-- Card 1 -->
+      <div class="relative group perspective service-card">
+        <div class="bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-20px_rgba(15,23,42,0.15)]
+                    p-10 transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+          <div class="mb-6 flex justify-center text-indigo-600">
+            <i data-feather="cpu" class="w-12 h-12"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-slate-900 mb-2 text-center">Computer Repair & Upgrades</h4>
+          <p class="text-slate-700 text-center leading-relaxed">
+            Keep your systems current and efficient with expert hardware & software maintenance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative group perspective service-card">
+        <div class="bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-20px_rgba(15,23,42,0.15)]
+                    p-10 transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+          <div class="mb-6 flex justify-center text-indigo-600">
+            <i data-feather="wifi" class="w-12 h-12"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-slate-900 mb-2 text-center">Networking Services</h4>
+          <p class="text-slate-700 text-center leading-relaxed">
+            Secure, scalable networks designed and maintained to keep your business online and connected.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative group perspective service-card">
+        <div class="bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-20px_rgba(15,23,42,0.15)]
+                    p-10 transform transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
+          <div class="mb-6 flex justify-center text-indigo-600">
+            <i data-feather="hard-drive" class="w-12 h-12"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-slate-900 mb-2 text-center">Hardware Repair & Replacement</h4>
+          <p class="text-slate-700 text-center leading-relaxed">
+            Apple & Windows support, tune-ups, and virus removal for smooth business operations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Add more cards here -->
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ==================== STRATEGY ==================== -->
+<section class="py-28 bg-gradient-to-b from-indigo-50 to-white overflow-hidden relative" data-aos="fade-up">
+  <!-- Background decorative shapes -->
+  <div class="absolute -top-20 left-1/4 w-72 h-72 bg-indigo-100/30 rounded-full blur-3xl animate-pulse-slow"></div>
+  <div class="absolute -bottom-24 right-1/3 w-96 h-96 bg-red-100/20 rounded-full blur-3xl animate-pulse-slow"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 text-center">
+    <h3 class="text-4xl font-bold mb-6 text-slate-900">Our Strategy</h3>
+    <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-16">
+      How we approach projects, innovation, and client success — dynamic solutions designed for impact.
+    </p>
+
+    <!-- Strategy grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="zap"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-indigo-600">Innovation First</h4>
+        <p class="text-slate-700 text-base">
+          Pushing the boundaries of technology to deliver unique solutions for every client.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-indigo-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="target"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-red-500">Client Focus</h4>
+        <p class="text-slate-700 text-base">
+          Every decision is made to maximize client impact and satisfaction.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-red-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="trending-up"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-indigo-600">Growth Driven</h4>
+        <p class="text-slate-700 text-base">
+          Strategic initiatives designed to scale technology and operations efficiently.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-indigo-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="settings"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-red-500">Efficiency</h4>
+        <p class="text-slate-700 text-base">
+          Streamlining processes to ensure maximum productivity and minimal downtime.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-red-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="users"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-indigo-600">Collaboration</h4>
+        <p class="text-slate-700 text-base">
+          Working closely with clients and partners to create seamless solutions.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-indigo-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="sun"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-red-500">Sustainability</h4>
+        <p class="text-slate-700 text-base">
+          Integrating environmentally conscious practices in every project.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-red-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== OPERATIONS ==================== -->
+<section class="py-28 bg-gradient-to-tr from-white via-slate-50 to-white relative overflow-hidden" data-aos="fade-up">
+  <!-- Decorative floating shapes -->
+  <div class="absolute -top-16 left-0 w-72 h-72 bg-indigo-100/20 rounded-full blur-3xl animate-pulse-slow"></div>
+  <div class="absolute -bottom-24 right-0 w-96 h-96 bg-red-100/15 rounded-full blur-3xl animate-pulse-slow"></div>
+
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h3 class="text-4xl font-extrabold mb-8 text-slate-900 tracking-tight">Our Operations</h3>
+
+    <p class="text-lg md:text-xl text-slate-700 mb-6 leading-relaxed">
+      At <span class="font-semibold text-indigo-600">Combined Technologies</span>, we operate with precision and professionalism. 
+      Our team of over 21 full-time staff and 3 interns drives innovation across software, networking, and hardware solutions.
+    </p>
+
+    <p class="text-lg md:text-xl text-slate-700 mb-6 leading-relaxed">
+      Located at <span class="font-semibold text-red-600">9 Warren Close, Greendale, Harare</span>, our offices serve as the hub for strategic ICT projects. 
+      We maintain close partnerships with leading technology providers to ensure our clients get certified-quality solutions.
+    </p>
+
+    <p class="text-lg md:text-xl text-slate-700 leading-relaxed">
+      Our team holds certifications from <span class="font-semibold text-indigo-600">Microsoft, CISCO, Novell, and KRONE</span>, enabling us to deliver reliable, professional services that exceed expectations.
+    </p>
+  </div>
+</section>
+
+
+<!-- ==================== WARRANTY & SUPPORT ==================== -->
+<section class="py-28 flex flex-col md:flex-row">
+  
+  <!-- Left Side: Warranty -->
+  <div class="flex-1 bg-red-50 flex flex-col items-center justify-center text-center p-12">
+    <div class="text-red-600 mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+    <h3 class="text-3xl font-extrabold mb-4 text-slate-900">1-Year Warranty</h3>
+    <p class="text-lg text-slate-700 max-w-sm leading-relaxed">
+      All products and services come with a full 12-month coverage, ensuring quality and peace of mind for every client.
+    </p>
+  </div>
+
+  <!-- Right Side: Support -->
+  <div class="flex-1 bg-indigo-50 flex flex-col items-center justify-center text-center p-12">
+    <div class="text-indigo-600 mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 11-12.728 12.728 9 9 0 0112.728-12.728zM12 8v4l3 3" />
+      </svg>
+    </div>
+    <h3 class="text-3xl font-extrabold mb-4 text-slate-900">24/7 Support</h3>
+    <p class="text-lg text-slate-700 max-w-sm leading-relaxed">
+      Professional assistance whenever you need it, day or night, ensuring your business operations never miss a beat.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- ==================== CLIENTS ==================== -->
+<section class="py-20 bg-white" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-semibold mb-12 text-center text-slate-800">Our Valued Clients</h3>
+
+    <div class="flex flex-wrap justify-center items-center gap-10">
+      <img src="./assets/client1.png" alt="Client 1" class="h-20 w-40 object-contain transition-transform duration-300 hover:scale-110">
+      <img src="./assets/client2.png" alt="Client 2" class="h-20 w-40 object-contain transition-transform duration-300 hover:scale-110">
+      <img src="./assets/client3.png" alt="Client 3" class="h-20 w-40 object-contain transition-transform duration-300 hover:scale-110">
+      <img src="./assets/client4.png" alt="Client 4" class="h-20 w-40 object-contain transition-transform duration-300 hover:scale-110">
+      <img src="./assets/client5.png" alt="Client 5" class="h-20 w-40 object-contain transition-transform duration-300 hover:scale-110">
+      <img src="./assets/client6.png" alt="Client 6" class="h-20 w-40 object-contain transition-transform duration-300 hover:scale-110">
+      <!-- Add more logos as needed -->
+    </div>
+  </div>
+</section>
+
+
+
+
+ <!-- ==================== CONTACT CTA ==================== -->
+<section class="relative py-20 bg-red-600 text-white overflow-hidden" data-aos="fade-up">
+  <!-- Decorative abstract shapes -->
+  <div class="absolute -top-16 -left-16 w-72 h-72 bg-red-500/30 rounded-full filter blur-3xl animate-pulse-slow"></div>
+  <div class="absolute -bottom-16 -right-16 w-72 h-72 bg-red-700/30 rounded-full filter blur-3xl animate-pulse-slow"></div>
+
+  <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+    <h3 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+      Let’s Build Something Together
+    </h3>
+    <p class="mb-8 text-lg md:text-xl max-w-2xl mx-auto">
+      Reach out to Combined Technologies and experience next-level ICT solutions for your business.
+      Visit us, email, or follow our social handles for the latest updates.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="contact.html" class="px-8 py-4 bg-white text-red-600 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-red-500 hover:text-white transition transform hover:-translate-y-1">
+        Contact Us
+      </a>
+      <a href="mailto:sales@combinedtech.co.zw" class="px-8 py-4 border-2 border-white rounded-xl font-semibold hover:bg-white hover:text-red-600 transition transform hover:-translate-y-1">
+        Email Us
+      </a>
+    </div>
+
+    <p class="mt-6 text-sm md:text-base text-white/80">
+      9 Warren Close, Greendale, Harare | @combinedtech_zw
+    </p>
+  </div>
+</section>
+
+
+
+
+</body>
+</html>
