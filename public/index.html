@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combined Technologies | ICT Solutions Zimbabwe</title>
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <script defer src="./js/index.js"></script>    
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  
+</head>
+<body class="bg-white text-slate-800 font-sans">
+  <div id="ui-portal"></div>
+
+<!-- ==================== HEADER ==================== -->
+<header
+  id="main-header"
+  class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm"
+>
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between relative">
+
+    <!-- Logo (flow naturally, vertically centered) -->
+    <a href="index.html" class="flex items-center z-50">
+      <img
+        src="./images/logo2.png"
+        alt="Combined Technologies Logo"
+        class="h-15 md:h-15 md:w-80"
+      />
+    </a>
+
+    <!-- Desktop Nav (centered) -->
+    <nav class="hidden md:flex w-full justify-center">
+      <ul class="flex space-x-10 text-md font-medium">
+        <li><a href="index.html" class="hover:text-red-600 transition">Home</a></li>
+        <li><a href="#services" class="hover:text-red-600 transition">Services</a></li>
+        <li><a href="#glance" class="hover:text-red-600 transition">About</a></li>
+        <li><a href="#enquiry" class="hover:text-red-600 transition">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger (right) -->
+    <button
+      id="menu-btn"
+      class="md:hidden z-50 focus:outline-none"
+    >
+      <svg
+        class="w-8 h-8 text-slate-800"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden bg-white/90 backdrop-blur-md shadow-md"
+  >
+    <nav class="flex flex-col items-center justify-center gap-6 py-8 text-base font-medium">
+      <a href="index.html" class="hover:text-red-600 transition">Home</a>
+      <a href="#" class="hover:text-red-600 transition">Services</a>
+      <a href="#" class="hover:text-red-600 transition">About</a>
+      <a href="#" class="hover:text-red-600 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- ==================== HERO ==================== -->
+<section class="
+  relative
+  min-h-screen pt-[72px]
+  flex items-center justify-center
+  overflow-hidden
+  bg-gradient-to-br from-[#162844] via-[#1a3350] to-[#1e4b82]
+">
+
+  <!-- ── Grid overlay ── -->
+  <div class="
+    absolute inset-0 z-[1] pointer-events-none
+    [background-image:linear-gradient(rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.03)_1px,transparent_1px)]
+    [background-size:60px_60px]
+  "></div>
+
+  <!-- ── Noise grain overlay ── -->
+  <div class="
+    absolute inset-0 z-[1] pointer-events-none opacity-[.06]
+    [background-image:url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20256%20256%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.9%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23n)%22%2F%3E%3C%2Fsvg%3E')]
+    [background-size:256px_256px]
+  "></div>
+
+  <!-- ── Ambient blob 1 – top-left blue ── -->
+  <div class="
+    absolute -top-44 -left-40 z-0
+    w-[520px] h-[520px] rounded-full
+    bg-[radial-gradient(circle,rgba(46,106,173,.35)_0%,transparent_70%)]
+    blur-[90px]
+    animate-drift1
+  "></div>
+
+  <!-- ── Ambient blob 2 – bottom-right red ── -->
+  <div class="
+    absolute -bottom-36 -right-24 z-0
+    w-[440px] h-[440px] rounded-full
+    bg-[radial-gradient(circle,rgba(185,40,48,.45)_0%,transparent_70%)]
+    blur-[90px]
+    animate-drift2
+  "></div>
+
+  <!-- ── Ambient blob 3 – centre-left subtle blue ── -->
+  <div class="
+    absolute top-1/2 left-[15%] z-0
+    w-80 h-80 rounded-full
+    bg-[radial-gradient(circle,rgba(30,75,130,.25)_0%,transparent_70%)]
+    blur-[90px]
+    animate-drift3
+  "></div>
+
+  <!-- ── Centred content ── -->
+  <div class="relative z-[2] w-full max-w-[780px] px-7 text-center">
+
+    <!-- Eyebrow tag -->
+    <div class="animate-fadeup delay-1 inline-flex items-center gap-2.5 mb-7">
+      <span class="w-9 h-0.5 bg-gradient-to-r from-transparent to-[#b92830]"></span>
+      <span class="font-['Inter'] font-medium text-[.85rem] tracking-[.22em] uppercase text-[#b92830]">
+        Combined Technologies
+      </span>
+      <span class="w-9 h-0.5 bg-gradient-to-l from-transparent to-[#b92830]"></span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="
+      animate-fadeup delay-2
+      font-['Lora'] font-bold
+      text-[clamp(2.6rem,6vw,4rem)] leading-[1.12]
+      text-white
+      mb-6
+      [text-shadow:0_2px_24px_rgba(0,0,0,.3)]
+    ">
+      Next-Gen ICT Solutions<br>
+      in <em class="not-italic text-[#7db8e8]">Zimbabwe</em>
+    </h1>
+
+    <!-- Description -->
+    <p class="
+      animate-fadeup delay-3
+      font-['Inter'] font-light
+      text-[clamp(1.05rem,2vw,1.2rem)] leading-7
+      text-slate-300
+      max-w-[580px] mx-auto mb-10
+    ">
+      Delivering ultra-modern software, hardware, and network services
+      with precision and professionalism.
+    </p>
+
+    <!-- CTA buttons -->
+    <div class="cta-wrap animate-fadeup delay-4 flex flex-wrap justify-center items-center gap-4 sm:flex-nowrap max-w-[300px] sm:max-w-none mx-auto">
+
+      <!-- Primary -->
+      <a href="#details" class="
+        font-['Inter'] font-semibold text-[.95rem] tracking-[.04em]
+        text-white no-underline
+        px-9 py-[15px] rounded-full
+        bg-gradient-to-r from-[#d63039] to-[#b92830]
+        shadow-[0_4px_24px_rgba(185,40,48,.45)]
+        hover:shadow-[0_6px_36px_rgba(185,40,48,.6)]
+        hover:-translate-y-0.5
+        active:translate-y-0
+        transition-all duration-300 ease-out
+      ">Contact Us</a>
+
+      <!-- Secondary -->
+      <a href="#services" class="
+        font-['Inter'] font-semibold text-[.95rem] tracking-[.04em]
+        text-white no-underline
+        px-9 py-[15px] rounded-full
+        bg-transparent
+        border-2 border-white/25
+        backdrop-blur-sm
+        hover:border-white/55 hover:bg-white/[.07]
+        hover:-translate-y-0.5
+        active:translate-y-0
+        transition-all duration-300 ease-out
+      ">Our Services</a>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- ==================== AT A GLANCE ==================== -->
+<section id="glance" class="relative py-28 bg-slate-50 overflow-hidden">
+
+  <!-- Ambient background accents -->
+  <div class="absolute -top-32 right-[-6rem] w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-[-4rem] w-80 h-80 bg-slate-900/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-20">
+      <span class="text-sm uppercase tracking-widest text-slate-500 font-semibold">
+        At a Glance
+      </span>
+      <h3 class="mt-4 text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+        A focused ICT partner built
+        <span class="text-indigo-600">for modern business</span>
+      </h3>
+      <p class="mt-6 text-lg text-slate-600">
+        A snapshot of who we are and how we create measurable impact through technology.
+      </p>
+    </div>
+
+    <!-- Content Rows -->
+    <div class="space-y-16">
+
+      <!-- Who We Are -->
+      <div class="grid md:grid-cols-12 gap-8 items-start group">
+        <div class="md:col-span-4">
+          <h4 class="text-2xl font-semibold text-slate-900">
+            Who We Are
+          </h4>
+          <div class="mt-3 h-1 w-16 bg-slate-900 rounded-full transition-all duration-500 group-hover:w-28"></div>
+        </div>
+
+        <div
+          class="md:col-span-8 p-8 bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-20px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-1"
+        >
+          <p class="text-lg text-slate-700 leading-relaxed">
+            We are a leading ICT company delivering software development, networking
+            solutions, enterprise systems integration, and strategic technology
+            consulting tailored for scalable growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- What We Do -->
+      <div class="grid md:grid-cols-12 gap-8 items-start group">
+        <div class="md:col-span-4">
+          <h4 class="text-2xl font-semibold text-slate-900">
+            What We Do
+          </h4>
+          <div class="mt-3 h-1 w-16 bg-slate-900 rounded-full transition-all duration-500 group-hover:w-28"></div>
+        </div>
+
+        <div
+          class="md:col-span-8 p-8 bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-20px_rgba(15,23,42,0.15)] transition-all duration-500 hover:-translate-y-1"
+        >
+          <p class="text-lg text-slate-700 leading-relaxed">
+            We design, implement, and support high-quality ICT solutions with a strong
+            emphasis on professionalism, reliability, and innovation enabling
+            businesses across Zimbabwe to operate smarter and faster.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== VISION & MISSION ==================== -->
+<section class="relative py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50">
+
+  <!-- Decorative background accents -->
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-slate-900/5 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+
+    <!-- Vision -->
+    <div class="group">
+      <span class="text-sm uppercase tracking-widest text-red-600 font-semibold">
+        Our Vision
+      </span>
+
+      <h3 class="mt-4 text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+        Shaping the future of
+        <span class="text-red-600">ICT excellence</span>
+      </h3>
+
+      <p class="mt-6 text-lg text-slate-600 max-w-xl">
+        To be the company of choice in the provision of quality ICT services
+        and innovative technology solutions.
+      </p>
+
+      <!-- Interactive underline -->
+      <div class="mt-8 h-1 w-24 bg-red-600 rounded-full transition-all duration-500 group-hover:w-40"></div>
+    </div>
+
+    <!-- Mission (glass panel, not a box) -->
+    <div
+      class="relative p-10 rounded-3xl bg-white/60 backdrop-blur-xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2"
+    >
+      <!-- Accent stripe -->
+      <div class="absolute top-0 left-0 h-full w-1 bg-red-600 rounded-full"></div>
+
+      <span class="text-sm uppercase tracking-widest text-red-600 font-semibold">
+        Our Mission
+      </span>
+
+      <h3 class="mt-4 text-3xl font-bold text-slate-900">
+        Purpose-driven delivery
+      </h3>
+
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+        Deliver outstanding ICT products and services through professional
+        hardware, software, and consultancy solutions that empower businesses
+        to scale with confidence.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section id="services" class="relative py-32 bg-slate-50 overflow-hidden" data-aos="fade-up">
+
+  <!-- Ambient accents -->
+  <div class="absolute -top-40 -left-40 w-[32rem] h-[32rem] bg-indigo-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-40 right-[-16rem] w-[36rem] h-[36rem] bg-sky-500/10 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-12 z-10 relative">
+      <span class="inline-block mb-4 text-xs tracking-widest uppercase text-slate-500 font-semibold">What We Do Best</span>
+      <h3 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+        End-to-End ICT Solutions<br /><span class="text-indigo-600">Built for Modern Enterprises</span>
+      </h3>
+      <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto">
+        As authorised distributors and technology partners, we deliver integrated ICT solutions spanning hardware, software, connectivity, security, and custom digital systems.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid gap-8 md:grid-cols-2">
+
+      <!-- CARD 1 -->
+      <div class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition duration-300 flex flex-col">
+        <img class="w-full h-65 object-cover" src="./images/laptops.jpg" alt="Computing">
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-900">Computing Supply, Repairs & Upgrades</h4>
+            <p class="mt-3 text-slate-700">
+              Enterprise-grade computing solutions covering procurement, lifecycle management, maintenance, and performance optimisation.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-md text-indigo-600 text-sm"><i data-feather="monitor" class="w-5 h-5"></i> Laptops & desktops</div>
+              <div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-md text-indigo-600 text-sm"><i data-feather="cpu" class="w-5 h-5"></i> Hardware upgrades</div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm"><i data-feather="activity" class="w-5 h-5"></i> Diagnostics & optimisation</div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm"><i data-feather="hard-drive" class="w-5 h-5"></i> Displays & peripherals</div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#enquiry" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition">Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition duration-300 flex flex-col">
+        <img class="w-full h-65 object-cover" src="./images/networking.jpg" alt="Networking">
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-900">Networking & IoT Infrastructure</h4>
+            <p class="mt-3 text-slate-700">
+              Secure, scalable networking and smart infrastructure solutions designed for reliability, performance, and future expansion.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="flex items-center gap-2 p-2 bg-sky-50 rounded-md text-sky-600 text-sm"><i data-feather="wifi" class="w-5 h-5"></i> Routers & firewalls</div>
+              <div class="flex items-center gap-2 p-2 bg-sky-50 rounded-md text-sky-600 text-sm"><i data-feather="hard-drive" class="w-5 h-5"></i> Structured cabling</div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm"><i data-feather="zap" class="w-5 h-5"></i> IoT & smart devices</div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm"><i data-feather="settings" class="w-5 h-5"></i> Design & deployment</div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#enquiry" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition">Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition duration-300 flex flex-col">
+        <img class="w-full h-65 object-cover" src="./images/licence.jpg" alt="Cybersecurity">
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-900">Software Licensing & Cybersecurity</h4>
+            <p class="mt-3 text-slate-700">
+              Licensed enterprise software and cybersecurity solutions that ensure compliance, productivity, and business continuity.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-md text-indigo-600 text-sm"><i data-feather="database" class="w-5 h-5"></i> Enterprise licensing</div>
+              <div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-md text-indigo-600 text-sm"><i data-feather="shield" class="w-5 h-5"></i> Endpoint security</div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm"><i data-feather="cloud" class="w-5 h-5"></i> Backup & recovery</div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm"><i data-feather="search" class="w-5 h-5"></i> Security audits</div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#enquiry" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition">Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition duration-300 flex flex-col">
+        <img class="w-full h-65 object-cover" src="./images/software.jpg" alt="Software">
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-900">Custom Software & Hosting</h4>
+            <p class="mt-3 text-slate-700">
+              Tailor-made digital solutions engineered to automate operations, integrate systems, and support long-term growth.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="flex items-center gap-2 p-2 bg-violet-50 rounded-md text-violet-600 text-sm"><i data-feather="code" class="w-5 h-5"></i> Web & business apps</div>
+              <div class="flex items-center gap-2 p-2 bg-yellow-50 rounded-md text-yellow-600 text-sm"><i data-feather="zap" class="w-5 h-5"></i> Automation & integrations</div>
+              <div class="flex items-center gap-2 p-2 bg-sky-50 rounded-md text-sky-600 text-sm"><i data-feather="cloud" class="w-5 h-5"></i> Web, email & DB hosting</div>
+              <div class="flex items-center gap-2 p-2 bg-emerald-50 rounded-md text-emerald-600 text-sm"><i data-feather="settings" class="w-5 h-5"></i> Ongoing support</div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#enquiry" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition">Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition duration-300 flex flex-col">
+        <img class="w-full h-65 object-cover" src="./images/voip.jpg" alt="VoIP">
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-900">VoIP & Business Telephony</h4>
+            <p class="mt-3 text-slate-700">
+              Modern voice communication systems delivering clarity, reliability, and cost efficiency for businesses of all sizes.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="flex items-center gap-2 p-2 bg-sky-50 rounded-md text-sky-600 text-sm"><i data-feather="cloud" class="w-5 h-5"></i> Cloud & on-prem</div>
+              <div class="flex items-center gap-2 p-2 bg-pink-50 rounded-md text-pink-600 text-sm"><i data-feather="phone-call" class="w-5 h-5"></i> Business numbers</div>
+              <div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-md text-indigo-600 text-sm"><i data-feather="globe" class="w-5 h-5"></i> Local & international</div>
+              <div class="flex items-center gap-2 p-2 bg-emerald-50 rounded-md text-emerald-600 text-sm"><i data-feather="monitor" class="w-5 h-5"></i> Monitoring & support</div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#enquiry" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition">Enquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 Digitization & Consulting -->
+      <div class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-2xl transition duration-300 flex flex-col">
+        <img class="w-full h-65 object-cover" src="./images/documens.jpg" alt="Digitization & Consulting">
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div>
+            <h4 class="text-2xl font-semibold text-slate-900">Digitization & Consulting</h4>
+            <p class="mt-3 text-slate-700">
+              Transform your business with document digitization, workflow automation, and expert consulting to streamline processes and enhance operational efficiency.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-md text-indigo-600 text-sm">
+                <i data-feather="file-text" class="w-5 h-5"></i> Document scanning
+              </div>
+              <div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-md text-indigo-600 text-sm">
+                <i data-feather="archive" class="w-5 h-5"></i> Digital archiving
+              </div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm">
+                <i data-feather="trending-up" class="w-5 h-5"></i> Workflow automation
+              </div>
+              <div class="flex items-center gap-2 p-2 bg-slate-50 rounded-md text-slate-600 text-sm">
+                <i data-feather="briefcase" class="w-5 h-5"></i> Business consulting
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#enquiry" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition">Enquire</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- ==================== STRATEGY ==================== -->
+<section class="py-28 bg-gradient-to-b from-indigo-50 to-white overflow-hidden relative" data-aos="fade-up">
+  <!-- Background decorative shapes -->
+  <div class="absolute -top-20 left-1/4 w-72 h-72 bg-indigo-100/30 rounded-full blur-3xl animate-pulse-slow"></div>
+  <div class="absolute -bottom-24 right-1/3 w-96 h-96 bg-red-100/20 rounded-full blur-3xl animate-pulse-slow"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 text-center">
+    <h3 class="text-4xl font-bold mb-6 text-slate-900">Our Strategy</h3>
+    <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-16">
+      How we approach projects, innovation, and client success.
+    </p>
+
+    <!-- Strategy grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+      
+      <!-- Card 1 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="zap"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-indigo-600">Innovation First</h4>
+        <p class="text-slate-700 text-base">
+          Pushing the boundaries of technology to deliver unique solutions for every client.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-indigo-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="target"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-red-500">Client Focus</h4>
+        <p class="text-slate-700 text-base">
+          Every decision is made to maximize client impact and satisfaction.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-red-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="trending-up"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-indigo-600">Growth Driven</h4>
+        <p class="text-slate-700 text-base">
+          Strategic initiatives designed to scale technology and operations efficiently.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-indigo-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="settings"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-red-500">Efficiency</h4>
+        <p class="text-slate-700 text-base">
+          Streamlining processes to ensure maximum productivity and minimal downtime.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-red-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-600 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="users"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-indigo-600">Collaboration</h4>
+        <p class="text-slate-700 text-base">
+          Working closely with clients and partners to create seamless solutions.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-indigo-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="group relative bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition duration-500 cursor-pointer">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-500 flex items-center justify-center text-white text-2xl transition group-hover:scale-110">
+          <i data-feather="sun"></i>
+        </div>
+        <h4 class="font-semibold text-xl mb-2 text-slate-900 transition group-hover:text-red-500">Sustainability</h4>
+        <p class="text-slate-700 text-base">
+          Integrating environmentally conscious practices in every project.
+        </p>
+        <div class="absolute -top-4 -right-4 w-16 h-16 bg-red-100/30 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== OPERATIONS ==================== -->
+<section class="py-28 bg-gradient-to-tr from-white via-slate-50 to-white relative overflow-hidden" data-aos="fade-up">
+  <!-- Decorative floating shapes -->
+  <div class="absolute -top-16 left-0 w-72 h-72 bg-indigo-100/20 rounded-full blur-3xl animate-pulse-slow"></div>
+  <div class="absolute -bottom-24 right-0 w-96 h-96 bg-red-100/15 rounded-full blur-3xl animate-pulse-slow"></div>
+
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h3 class="text-4xl font-extrabold mb-8 text-slate-900 tracking-tight">Our Operations</h3>
+
+    <p class="text-lg md:text-xl text-slate-700 mb-6 leading-relaxed">
+      At <span class="font-semibold text-indigo-600">Combined Technologies</span>, we operate with precision and professionalism. 
+      Our team of over 21 full-time staff and 3 interns drives innovation across software, networking, and hardware solutions.
+    </p>
+
+    <p class="text-lg md:text-xl text-slate-700 mb-6 leading-relaxed">
+      Located at <span class="font-semibold text-red-600">9 Warren Close, Greendale, Harare</span>, our offices serve as the hub for strategic ICT projects. 
+      We maintain close partnerships with leading technology providers to ensure our clients get certified-quality solutions.
+    </p>
+
+    <p class="text-lg md:text-xl text-slate-700 leading-relaxed">
+      Our team holds certifications from <span class="font-semibold text-indigo-600">Microsoft, CISCO, Novell, and KRONE</span>, enabling us to deliver reliable, professional services that exceed expectations.
+    </p>
+  </div>
+</section>
+
+
+<!-- ==================== WARRANTY & SUPPORT ==================== -->
+<section class="py-28 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <!-- Warranty Card -->
+      <div class="group relative bg-white rounded-3xl p-12 text-center shadow-sm hover:shadow-xl transition-all duration-300  border-slate-200 overflow-hidden">
+        
+        <!-- Accent strip -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-rose-400"></div>
+
+        <!-- Soft glow on hover -->
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition pointer-events-none">
+          <div class="absolute -top-20 -left-20 w-72 h-72 bg-red-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <!-- Icon -->
+        <div class="mx-auto mb-8 text-red-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3l7 4v5c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V7l7-4z" />
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12l2 2 4-4" />
+          </svg>
+        </div>
+
+        <h3 class="text-3xl font-bold text-slate-900 mb-4">
+          1-Year Warranty
+        </h3>
+
+        <p class="text-slate-600 text-lg leading-relaxed max-w-md mx-auto">
+          Every product and service is covered for 12 months, ensuring long-term reliability and zero second-guessing.
+        </p>
+      </div>
+
+      <!-- Support Card -->
+      <div class="group relative bg-white rounded-3xl p-12 text-center shadow-sm hover:shadow-xl transition-all duration-300 border-slate-200 overflow-hidden">
+        
+        <!-- Accent strip -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-sky-400"></div>
+
+        <!-- Soft glow on hover -->
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition pointer-events-none">
+          <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <!-- Icon -->
+        <div class="mx-auto mb-8 text-indigo-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              d="M4 12a8 8 0 0116 0v5a2 2 0 01-2 2h-2v-6h4M4 12v5a2 2 0 002 2h2v-6H4" />
+          </svg>
+        </div>
+
+        <h3 class="text-3xl font-bold text-slate-900 mb-4">
+          24/7 Support
+        </h3>
+
+        <p class="text-slate-600 text-lg leading-relaxed max-w-md mx-auto">
+          Always-on technical support to keep your operations stable, responsive, and fully supported.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-20 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-semibold mb-12 text-center text-slate-800">
+      Our Valued Clients
+    </h3>
+
+    <div class="relative overflow-hidden">
+      <!-- Gradient masks -->
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+      <!-- Track -->
+      <div class="carousel-track">
+        <!-- GROUP 1 -->
+        <div class="flex items-center">
+          <img src="./images/client1.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client2.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client3.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client4.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client5.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client6.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client7.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c8.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c9.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c10.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c11.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c12.jpg" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c13.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c14.jpg" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c15.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c16.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c17.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c18.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+        </div>
+
+        <!-- GROUP 2 (exact duplicate) -->
+        <div class="flex items-center">
+          <img src="./images/client1.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client2.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client3.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client4.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client5.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client6.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/client7.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c8.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c9.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c10.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c11.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c12.jpg" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c13.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c14.jpg" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c15.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c16.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c17.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+          <img src="./images/c18.png" class="h-20 w-40 md:h-24 md:w-48 object-contain px-8 md:px-10 shrink-0" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ENQUIRY FORM ==================== -->
+<section id="enquiry" class="relative py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden">
+  <!-- Background accents -->
+  <div class="absolute -top-40 -left-40 w-80 h-80 bg-indigo-100/20 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-32 right-0 w-96 h-96 bg-red-100/20 rounded-full blur-3xl"></div>
+
+  <div class="container mx-auto px-6 max-w-2xl relative z-10">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-2 rounded-full bg-red-100/20 text-red-600 font-medium text-sm mb-4 border border-red-100">
+        Get in Touch
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+        Let's Start a Conversation
+      </h2>
+      <p class="text-lg text-slate-600 max-w-md mx-auto">
+        Share your vision with us. We'll craft the perfect solution together.
+      </p>
+    </div>
+
+    <form id="enquiryForm" class="bg-white/90 p-8 md:p-10 rounded-3xl shadow-xl space-y-6 border border-slate-200">
+      <!-- Name and Email -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <label for="name" class="block text-sm font-medium text-slate-700">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required
+            class="w-full px-4 py-3 bg-white rounded-xl border border-slate-300 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition placeholder-slate-400">
+        </div>
+        
+        <div class="space-y-2">
+          <label for="email" class="block text-sm font-medium text-slate-700">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required
+            class="w-full px-4 py-3 bg-white rounded-xl border border-slate-300 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition placeholder-slate-400">
+        </div>
+      </div>
+
+      <!-- Phone and Subject -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+          <label for="phone" class="block text-sm font-medium text-slate-700">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+263 77 123 4567"
+            class="w-full px-4 py-3 bg-white rounded-xl border border-slate-300 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition placeholder-slate-400">
+        </div>
+        
+        <div class="space-y-2">
+          <label for="subject" class="block text-sm font-medium text-slate-700">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project Inquiry"
+            class="w-full px-4 py-3 bg-white rounded-xl border border-slate-300 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition placeholder-slate-400">
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="space-y-2">
+        <label for="message" class="block text-sm font-medium text-slate-700">Your Message *</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project or inquiry..." required
+          class="w-full px-4 py-3 bg-white rounded-xl border border-slate-300 focus:border-red-600 focus:outline-none focus:ring-1 focus:ring-red-600 transition placeholder-slate-400 resize-none"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="pt-4">
+        <button type="submit"
+          class="w-full py-4 px-6 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 focus:outline-none">
+          Send Message
+        </button>
+        <p class="text-center text-slate-500 text-sm mt-4">
+          We typically respond within 24 hours
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- ==================== CONTACT DETAILS ==================== -->
+<section id="details" class="relative py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+        Contact Information
+      </h3>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+        Get in touch with us through any of these channels
+      </p>
+    </div>
+
+    <!-- Contact Cards - Clean Single Row -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+      <!-- Mobile -->
+      <div class="bg-slate-50 rounded-xl p-6 text-center w-full md:w-auto min-w-[220px]">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full flex items-center justify-center">
+          <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h4 class="font-semibold text-slate-800 mb-2">Mobile</h4>
+        <p class="text-lg font-medium text-slate-900">+263 77 318 6236</p>
+        <p class="text-sm text-slate-500 mt-2">Mon-Fri, 8am-5pm</p>
+      </div>
+
+      <!-- Landline -->
+      <div class="bg-slate-50 rounded-xl p-6 text-center w-full md:w-auto min-w-[220px]">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full flex items-center justify-center">
+          <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+        </div>
+        <h4 class="font-semibold text-slate-800 mb-2">Landline</h4>
+        <p class="text-lg font-medium text-slate-900">024 248 0228</p>
+        <p class="text-sm text-slate-500 mt-2">Office hours</p>
+      </div>
+
+      <!-- Email -->
+      <div class="bg-slate-50 rounded-xl p-6 text-center w-full md:w-auto min-w-[220px]">
+        <div class="w-10 h-10 mx-auto mb-4 rounded-full flex items-center justify-center">
+          <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h4 class="font-semibold text-slate-800 mb-2">Email</h4>
+        <p class="text-lg font-medium text-slate-900">sales@combinedtech.co.zw</p>
+        <p class="text-sm text-slate-500 mt-2">Response within 24h</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+ <!-- ==================== CONTACT CTA ==================== -->
+<section class="relative py-20 bg-red-600 text-white overflow-hidden" data-aos="fade-up">
+  <!-- Decorative abstract shapes -->
+  <div class="absolute -top-16 -left-16 w-72 h-72 bg-red-500/30 rounded-full filter blur-3xl animate-pulse-slow"></div>
+  <div class="absolute -bottom-16 -right-16 w-72 h-72 bg-red-700/30 rounded-full filter blur-3xl animate-pulse-slow"></div>
+
+  <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+    <h3 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+      Let’s Build Something Together
+    </h3>
+    <p class="mb-8 text-lg md:text-xl max-w-2xl mx-auto">
+      Reach out to Combined Technologies and experience next-level ICT solutions for your business.
+      Visit us, email, or follow our social handles for the latest updates.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a 
+        href="https://wa.me/263773186236?text=Hello%2C%20please%20assist%20me%20with%20my%20enquiry.%0AThank%20you!"
+        class="px-8 py-4 bg-white text-red-600 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-red-500 hover:text-white transition transform hover:-translate-y-1 inline-block"
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Contact us on WhatsApp"
+      >
+        Contact Us
+      </a>
+      <a href="mailto:sales@combinedtech.co.zw" class="px-8 py-4 border-2 border-white rounded-xl font-semibold hover:bg-white hover:text-red-600 transition transform hover:-translate-y-1">
+        Email Us
+      </a>
+    </div>
+
+    <p class="mt-6 text-sm md:text-base text-white/80">
+      9 Warren Close, Greendale, Harare | @combinedtech_zw
+    </p>
+  </div>
+</section>
+
+
+
+
+
+</body>
+</html>
